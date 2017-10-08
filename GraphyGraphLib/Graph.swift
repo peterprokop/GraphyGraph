@@ -43,10 +43,17 @@ open class Graph<V: Hashable> {
     /// - parameter vertex: The vertex to find reachable vertices.
     /// - returns: An array of the reachable vertices.
     public func reachable(from vertex: V) -> [V] {
-        guard let edges = adjacency[vertex] else {
-             return []
+        if isDirected {
+            guard let edges = adjacency[vertex] else {
+                 return []
+            }
+            return edges.map { $0.target }
+        } else {
+            let reachable = edges.filter { $0.target == vertex}.map { $0.source }
+                + edges.filter { $0.source == vertex}.map { $0.target }
+
+            return reachable
         }
-        return edges.map { $0.target }
     }
 
     /// Find all of the edges where given vertex is source.
@@ -122,11 +129,8 @@ open class Graph<V: Hashable> {
                 }
             }
         }
-
-
-
     }
-    
+
 }
 
 extension Graph where V: CustomDebugStringConvertible {

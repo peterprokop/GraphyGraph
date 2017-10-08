@@ -7,13 +7,17 @@
 //
 
 public struct Edge<V: Hashable>: Hashable {
-    public var hashValue: Int
+
+    let source: V
+    let target: V
 
     public static func ==(lhs: Edge<V>, rhs: Edge<V>) -> Bool {
-        return true
+        return lhs.source == rhs.source &&
+            lhs.target == rhs.target
     }
 
-    var source: V
-    var target: V
+    public var hashValue: Int {
+        return source.hashValue ^ target.hashValue
+    }
 
 }
