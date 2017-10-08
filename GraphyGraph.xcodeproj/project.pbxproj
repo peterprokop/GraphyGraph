@@ -15,6 +15,13 @@
 		0DDC4B901F8909B400BEFE10 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC4B8F1F8909B400BEFE10 /* MainViewController.swift */; };
 		0DDC4B921F890B6800BEFE10 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DDC4B911F890B6800BEFE10 /* MainViewController.xib */; };
 		0DDC4B951F89118300BEFE10 /* NSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC4B941F89118300BEFE10 /* NSView.swift */; };
+		0DDC4BA51F8A777500BEFE10 /* GraphyGraphLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDC4B9C1F8A777400BEFE10 /* GraphyGraphLib.framework */; };
+		0DDC4BAC1F8A777500BEFE10 /* GraphyGraphLibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC4BAB1F8A777500BEFE10 /* GraphyGraphLibTests.swift */; };
+		0DDC4BAE1F8A777500BEFE10 /* GraphyGraphLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DDC4B9E1F8A777500BEFE10 /* GraphyGraphLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DDC4BB11F8A777500BEFE10 /* GraphyGraphLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDC4B9C1F8A777400BEFE10 /* GraphyGraphLib.framework */; };
+		0DDC4BB21F8A777500BEFE10 /* GraphyGraphLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDC4B9C1F8A777400BEFE10 /* GraphyGraphLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0DDC4BBB1F8A779E00BEFE10 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC4BBA1F8A779E00BEFE10 /* Graph.swift */; };
+		0DDC4BBD1F8A786A00BEFE10 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC4BBC1F8A786A00BEFE10 /* Edge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +39,42 @@
 			remoteGlobalIDString = 0DDC4B611F89008D00BEFE10;
 			remoteInfo = GraphyGraph;
 		};
+		0DDC4BA61F8A777500BEFE10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DDC4B5A1F89008D00BEFE10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DDC4B9B1F8A777400BEFE10;
+			remoteInfo = GraphyGraphLib;
+		};
+		0DDC4BA81F8A777500BEFE10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DDC4B5A1F89008D00BEFE10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DDC4B611F89008D00BEFE10;
+			remoteInfo = GraphyGraph;
+		};
+		0DDC4BAF1F8A777500BEFE10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DDC4B5A1F89008D00BEFE10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DDC4B9B1F8A777400BEFE10;
+			remoteInfo = GraphyGraphLib;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0DDC4BB61F8A777500BEFE10 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0DDC4BB21F8A777500BEFE10 /* GraphyGraphLib.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0DDC4B621F89008D00BEFE10 /* GraphyGraph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphyGraph.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +92,14 @@
 		0DDC4B8F1F8909B400BEFE10 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0DDC4B911F890B6800BEFE10 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		0DDC4B941F89118300BEFE10 /* NSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSView.swift; sourceTree = "<group>"; };
+		0DDC4B9C1F8A777400BEFE10 /* GraphyGraphLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GraphyGraphLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DDC4B9E1F8A777500BEFE10 /* GraphyGraphLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraphyGraphLib.h; sourceTree = "<group>"; };
+		0DDC4B9F1F8A777500BEFE10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DDC4BA41F8A777500BEFE10 /* GraphyGraphLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphyGraphLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DDC4BAB1F8A777500BEFE10 /* GraphyGraphLibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphyGraphLibTests.swift; sourceTree = "<group>"; };
+		0DDC4BAD1F8A777500BEFE10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DDC4BBA1F8A779E00BEFE10 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		0DDC4BBC1F8A786A00BEFE10 /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DDC4BB11F8A777500BEFE10 /* GraphyGraphLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +125,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0DDC4B981F8A777400BEFE10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DDC4BA11F8A777500BEFE10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DDC4BA51F8A777500BEFE10 /* GraphyGraphLib.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,6 +149,8 @@
 				0DDC4B641F89008D00BEFE10 /* GraphyGraph */,
 				0DDC4B751F89008D00BEFE10 /* GraphyGraphTests */,
 				0DDC4B801F89008E00BEFE10 /* GraphyGraphUITests */,
+				0DDC4B9D1F8A777500BEFE10 /* GraphyGraphLib */,
+				0DDC4BAA1F8A777500BEFE10 /* GraphyGraphLibTests */,
 				0DDC4B631F89008D00BEFE10 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,6 +161,8 @@
 				0DDC4B621F89008D00BEFE10 /* GraphyGraph.app */,
 				0DDC4B721F89008D00BEFE10 /* GraphyGraphTests.xctest */,
 				0DDC4B7D1F89008E00BEFE10 /* GraphyGraphUITests.xctest */,
+				0DDC4B9C1F8A777400BEFE10 /* GraphyGraphLib.framework */,
+				0DDC4BA41F8A777500BEFE10 /* GraphyGraphLibTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,7 +208,38 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		0DDC4B9D1F8A777500BEFE10 /* GraphyGraphLib */ = {
+			isa = PBXGroup;
+			children = (
+				0DDC4B9E1F8A777500BEFE10 /* GraphyGraphLib.h */,
+				0DDC4B9F1F8A777500BEFE10 /* Info.plist */,
+				0DDC4BBA1F8A779E00BEFE10 /* Graph.swift */,
+				0DDC4BBC1F8A786A00BEFE10 /* Edge.swift */,
+			);
+			path = GraphyGraphLib;
+			sourceTree = "<group>";
+		};
+		0DDC4BAA1F8A777500BEFE10 /* GraphyGraphLibTests */ = {
+			isa = PBXGroup;
+			children = (
+				0DDC4BAB1F8A777500BEFE10 /* GraphyGraphLibTests.swift */,
+				0DDC4BAD1F8A777500BEFE10 /* Info.plist */,
+			);
+			path = GraphyGraphLibTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0DDC4B991F8A777400BEFE10 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DDC4BAE1F8A777500BEFE10 /* GraphyGraphLib.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		0DDC4B611F89008D00BEFE10 /* GraphyGraph */ = {
@@ -148,10 +249,12 @@
 				0DDC4B5E1F89008D00BEFE10 /* Sources */,
 				0DDC4B5F1F89008D00BEFE10 /* Frameworks */,
 				0DDC4B601F89008D00BEFE10 /* Resources */,
+				0DDC4BB61F8A777500BEFE10 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0DDC4BB01F8A777500BEFE10 /* PBXTargetDependency */,
 			);
 			name = GraphyGraph;
 			productName = GraphyGraph;
@@ -194,6 +297,43 @@
 			productReference = 0DDC4B7D1F89008E00BEFE10 /* GraphyGraphUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0DDC4B9B1F8A777400BEFE10 /* GraphyGraphLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DDC4BB31F8A777500BEFE10 /* Build configuration list for PBXNativeTarget "GraphyGraphLib" */;
+			buildPhases = (
+				0DDC4B971F8A777400BEFE10 /* Sources */,
+				0DDC4B981F8A777400BEFE10 /* Frameworks */,
+				0DDC4B991F8A777400BEFE10 /* Headers */,
+				0DDC4B9A1F8A777400BEFE10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GraphyGraphLib;
+			productName = GraphyGraphLib;
+			productReference = 0DDC4B9C1F8A777400BEFE10 /* GraphyGraphLib.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0DDC4BA31F8A777500BEFE10 /* GraphyGraphLibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DDC4BB71F8A777500BEFE10 /* Build configuration list for PBXNativeTarget "GraphyGraphLibTests" */;
+			buildPhases = (
+				0DDC4BA01F8A777500BEFE10 /* Sources */,
+				0DDC4BA11F8A777500BEFE10 /* Frameworks */,
+				0DDC4BA21F8A777500BEFE10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0DDC4BA71F8A777500BEFE10 /* PBXTargetDependency */,
+				0DDC4BA91F8A777500BEFE10 /* PBXTargetDependency */,
+			);
+			name = GraphyGraphLibTests;
+			productName = GraphyGraphLibTests;
+			productReference = 0DDC4BA41F8A777500BEFE10 /* GraphyGraphLibTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -218,6 +358,16 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0DDC4B611F89008D00BEFE10;
 					};
+					0DDC4B9B1F8A777400BEFE10 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+					0DDC4BA31F8A777500BEFE10 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0DDC4B611F89008D00BEFE10;
+					};
 				};
 			};
 			buildConfigurationList = 0DDC4B5D1F89008D00BEFE10 /* Build configuration list for PBXProject "GraphyGraph" */;
@@ -236,6 +386,8 @@
 				0DDC4B611F89008D00BEFE10 /* GraphyGraph */,
 				0DDC4B711F89008D00BEFE10 /* GraphyGraphTests */,
 				0DDC4B7C1F89008E00BEFE10 /* GraphyGraphUITests */,
+				0DDC4B9B1F8A777400BEFE10 /* GraphyGraphLib */,
+				0DDC4BA31F8A777500BEFE10 /* GraphyGraphLibTests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,6 +411,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0DDC4B7B1F89008E00BEFE10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DDC4B9A1F8A777400BEFE10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DDC4BA21F8A777500BEFE10 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -294,6 +460,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0DDC4B971F8A777400BEFE10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DDC4BBD1F8A786A00BEFE10 /* Edge.swift in Sources */,
+				0DDC4BBB1F8A779E00BEFE10 /* Graph.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DDC4BA01F8A777500BEFE10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DDC4BAC1F8A777500BEFE10 /* GraphyGraphLibTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -306,6 +489,21 @@
 			isa = PBXTargetDependency;
 			target = 0DDC4B611F89008D00BEFE10 /* GraphyGraph */;
 			targetProxy = 0DDC4B7E1F89008E00BEFE10 /* PBXContainerItemProxy */;
+		};
+		0DDC4BA71F8A777500BEFE10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DDC4B9B1F8A777400BEFE10 /* GraphyGraphLib */;
+			targetProxy = 0DDC4BA61F8A777500BEFE10 /* PBXContainerItemProxy */;
+		};
+		0DDC4BA91F8A777500BEFE10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DDC4B611F89008D00BEFE10 /* GraphyGraph */;
+			targetProxy = 0DDC4BA81F8A777500BEFE10 /* PBXContainerItemProxy */;
+		};
+		0DDC4BB01F8A777500BEFE10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DDC4B9B1F8A777400BEFE10 /* GraphyGraphLib */;
+			targetProxy = 0DDC4BAF1F8A777500BEFE10 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -430,6 +628,7 @@
 		0DDC4B871F89008E00BEFE10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GraphyGraph/GraphyGraph.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -445,6 +644,7 @@
 		0DDC4B881F89008E00BEFE10 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GraphyGraph/GraphyGraph.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -519,6 +719,87 @@
 			};
 			name = Release;
 		};
+		0DDC4BB41F8A777500BEFE10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = GraphyGraphLib/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = prokop.GraphyGraphLib;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0DDC4BB51F8A777500BEFE10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = GraphyGraphLib/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = prokop.GraphyGraphLib;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0DDC4BB81F8A777500BEFE10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = GraphyGraphLibTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = prokop.GraphyGraphLibTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GraphyGraph.app/Contents/MacOS/GraphyGraph";
+			};
+			name = Debug;
+		};
+		0DDC4BB91F8A777500BEFE10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = GraphyGraphLibTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = prokop.GraphyGraphLibTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GraphyGraph.app/Contents/MacOS/GraphyGraph";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -554,6 +835,24 @@
 			buildConfigurations = (
 				0DDC4B8D1F89008E00BEFE10 /* Debug */,
 				0DDC4B8E1F89008E00BEFE10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DDC4BB31F8A777500BEFE10 /* Build configuration list for PBXNativeTarget "GraphyGraphLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DDC4BB41F8A777500BEFE10 /* Debug */,
+				0DDC4BB51F8A777500BEFE10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DDC4BB71F8A777500BEFE10 /* Build configuration list for PBXNativeTarget "GraphyGraphLibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DDC4BB81F8A777500BEFE10 /* Debug */,
+				0DDC4BB91F8A777500BEFE10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
