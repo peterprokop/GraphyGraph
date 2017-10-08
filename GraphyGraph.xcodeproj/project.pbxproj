@@ -12,6 +12,9 @@
 		0DDC4B6B1F89008D00BEFE10 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DDC4B691F89008D00BEFE10 /* MainMenu.xib */; };
 		0DDC4B771F89008E00BEFE10 /* GraphyGraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC4B761F89008E00BEFE10 /* GraphyGraphTests.swift */; };
 		0DDC4B821F89008E00BEFE10 /* GraphyGraphUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC4B811F89008E00BEFE10 /* GraphyGraphUITests.swift */; };
+		0DDC4B901F8909B400BEFE10 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC4B8F1F8909B400BEFE10 /* MainViewController.swift */; };
+		0DDC4B921F890B6800BEFE10 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DDC4B911F890B6800BEFE10 /* MainViewController.xib */; };
+		0DDC4B951F89118300BEFE10 /* NSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC4B941F89118300BEFE10 /* NSView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		0DDC4B7D1F89008E00BEFE10 /* GraphyGraphUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphyGraphUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DDC4B811F89008E00BEFE10 /* GraphyGraphUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphyGraphUITests.swift; sourceTree = "<group>"; };
 		0DDC4B831F89008E00BEFE10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DDC4B8F1F8909B400BEFE10 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0DDC4B911F890B6800BEFE10 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		0DDC4B941F89118300BEFE10 /* NSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,11 +100,14 @@
 		0DDC4B641F89008D00BEFE10 /* GraphyGraph */ = {
 			isa = PBXGroup;
 			children = (
+				0DDC4B931F89117400BEFE10 /* Extensions */,
 				0DDC4B651F89008D00BEFE10 /* AppDelegate.swift */,
 				0DDC4B671F89008D00BEFE10 /* Assets.xcassets */,
 				0DDC4B691F89008D00BEFE10 /* MainMenu.xib */,
 				0DDC4B6C1F89008D00BEFE10 /* Info.plist */,
 				0DDC4B6D1F89008D00BEFE10 /* GraphyGraph.entitlements */,
+				0DDC4B8F1F8909B400BEFE10 /* MainViewController.swift */,
+				0DDC4B911F890B6800BEFE10 /* MainViewController.xib */,
 			);
 			path = GraphyGraph;
 			sourceTree = "<group>";
@@ -119,6 +128,14 @@
 				0DDC4B831F89008E00BEFE10 /* Info.plist */,
 			);
 			path = GraphyGraphUITests;
+			sourceTree = "<group>";
+		};
+		0DDC4B931F89117400BEFE10 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0DDC4B941F89118300BEFE10 /* NSView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DDC4B681F89008D00BEFE10 /* Assets.xcassets in Resources */,
+				0DDC4B921F890B6800BEFE10 /* MainViewController.xib in Resources */,
 				0DDC4B6B1F89008D00BEFE10 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +273,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DDC4B661F89008D00BEFE10 /* AppDelegate.swift in Sources */,
+				0DDC4B951F89118300BEFE10 /* NSView.swift in Sources */,
+				0DDC4B901F8909B400BEFE10 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
