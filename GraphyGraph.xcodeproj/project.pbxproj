@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D094D7C1F8C0B72007AE07F /* simple.graphml in Resources */ = {isa = PBXBuildFile; fileRef = 0D094D7B1F8C0B72007AE07F /* simple.graphml */; };
+		0D4830D21F8C118100212BAE /* simple.graphml in Resources */ = {isa = PBXBuildFile; fileRef = 0D094D7B1F8C0B72007AE07F /* simple.graphml */; };
+		0D4830D71F8C14F800212BAE /* GraphMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4830D61F8C14F800212BAE /* GraphMLParser.swift */; };
+		0D4830D81F8C1D5200212BAE /* simple.graphml in Resources */ = {isa = PBXBuildFile; fileRef = 0D094D7B1F8C0B72007AE07F /* simple.graphml */; };
 		0DDC4B661F89008D00BEFE10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC4B651F89008D00BEFE10 /* AppDelegate.swift */; };
 		0DDC4B681F89008D00BEFE10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DDC4B671F89008D00BEFE10 /* Assets.xcassets */; };
 		0DDC4B6B1F89008D00BEFE10 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DDC4B691F89008D00BEFE10 /* MainMenu.xib */; };
@@ -77,6 +81,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D094D7B1F8C0B72007AE07F /* simple.graphml */ = {isa = PBXFileReference; lastKnownFileType = text; path = simple.graphml; sourceTree = "<group>"; };
+		0D094D7D1F8C0BD8007AE07F /* attributes.graphml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = attributes.graphml; sourceTree = "<group>"; };
+		0D4830D61F8C14F800212BAE /* GraphMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphMLParser.swift; sourceTree = "<group>"; };
 		0DDC4B621F89008D00BEFE10 /* GraphyGraph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphyGraph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DDC4B651F89008D00BEFE10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DDC4B671F89008D00BEFE10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,6 +150,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D094D7A1F8C0A31007AE07F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0D094D7D1F8C0BD8007AE07F /* attributes.graphml */,
+				0D094D7B1F8C0B72007AE07F /* simple.graphml */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		0DDC4B591F89008D00BEFE10 = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +231,7 @@
 				0DDC4B9F1F8A777500BEFE10 /* Info.plist */,
 				0DDC4BBA1F8A779E00BEFE10 /* Graph.swift */,
 				0DDC4BBC1F8A786A00BEFE10 /* Edge.swift */,
+				0D4830D61F8C14F800212BAE /* GraphMLParser.swift */,
 			);
 			path = GraphyGraphLib;
 			sourceTree = "<group>";
@@ -222,6 +239,7 @@
 		0DDC4BAA1F8A777500BEFE10 /* GraphyGraphLibTests */ = {
 			isa = PBXGroup;
 			children = (
+				0D094D7A1F8C0A31007AE07F /* Resources */,
 				0DDC4BAB1F8A777500BEFE10 /* GraphyGraphLibTests.swift */,
 				0DDC4BAD1F8A777500BEFE10 /* Info.plist */,
 			);
@@ -398,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DDC4B681F89008D00BEFE10 /* Assets.xcassets in Resources */,
+				0D4830D81F8C1D5200212BAE /* simple.graphml in Resources */,
 				0DDC4B921F890B6800BEFE10 /* MainViewController.xib in Resources */,
 				0DDC4B6B1F89008D00BEFE10 /* MainMenu.xib in Resources */,
 			);
@@ -421,6 +440,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D4830D21F8C118100212BAE /* simple.graphml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +448,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D094D7C1F8C0B72007AE07F /* simple.graphml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +487,7 @@
 			files = (
 				0DDC4BBD1F8A786A00BEFE10 /* Edge.swift in Sources */,
 				0DDC4BBB1F8A779E00BEFE10 /* Graph.swift in Sources */,
+				0D4830D71F8C14F800212BAE /* GraphMLParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

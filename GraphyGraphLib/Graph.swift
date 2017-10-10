@@ -38,11 +38,11 @@ open class Graph<V: Hashable> {
         }
     }
 
-    /// Find all vertices reachable from given Vertex.
+    /// Find all vertices directly reachable from given Vertex.
     ///
     /// - parameter vertex: The vertex to find reachable vertices.
     /// - returns: An array of the reachable vertices.
-    public func reachable(from vertex: V) -> [V] {
+    public func reachableArray(from vertex: V) -> [V] {
         if isDirected {
             guard let edges = adjacency[vertex] else {
                  return []
@@ -54,6 +54,14 @@ open class Graph<V: Hashable> {
 
             return reachable
         }
+    }
+
+    /// Find all vertices directly reachable from given Vertex.
+    ///
+    /// - parameter vertex: The vertex to find reachable vertices.
+    /// - returns: An set of the reachable vertices.
+    public func reachable(from vertex: V) -> Set<V> {
+        return Set<V>(reachableArray(from: vertex))
     }
 
     /// Find all of the edges where given vertex is source.
