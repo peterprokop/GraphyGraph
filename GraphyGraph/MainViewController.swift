@@ -27,8 +27,6 @@ class MainViewController: NSViewController {
         splitView.addArrangedSubview(view1)
         splitView.addArrangedSubview(graphViewController.view)
 
-        splitView.setPosition(100, ofDividerAt: 0)
-
         view.addSubview(splitView)
 
         let constraint1 = NSLayoutConstraint(
@@ -77,6 +75,8 @@ class MainViewController: NSViewController {
             constraint3,
             constraint4,
         ])
+
+        splitView.setPosition(100, ofDividerAt: 0)
     }
     
 }

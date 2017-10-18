@@ -35,6 +35,8 @@ class VertexView: NSView {
                 x: newDragLocation.x - mouseDownLocation.x,
                 y: newDragLocation.y - mouseDownLocation.y
             )
+
+            superview?.needsDisplay = true
         }
     }
 
