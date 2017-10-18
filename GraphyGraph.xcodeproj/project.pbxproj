@@ -26,6 +26,8 @@
 		0DDC4BB21F8A777500BEFE10 /* GraphyGraphLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDC4B9C1F8A777400BEFE10 /* GraphyGraphLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DDC4BBB1F8A779E00BEFE10 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC4BBA1F8A779E00BEFE10 /* Graph.swift */; };
 		0DDC4BBD1F8A786A00BEFE10 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC4BBC1F8A786A00BEFE10 /* Edge.swift */; };
+		0DF32F541F97634C007AEEFF /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF32F521F97634C007AEEFF /* GraphViewController.swift */; };
+		0DF32F551F97634C007AEEFF /* GraphViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DF32F531F97634C007AEEFF /* GraphViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		0DDC4BAD1F8A777500BEFE10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DDC4BBA1F8A779E00BEFE10 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		0DDC4BBC1F8A786A00BEFE10 /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
+		0DF32F521F97634C007AEEFF /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
+		0DF32F531F97634C007AEEFF /* GraphViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +198,8 @@
 				0DDC4B6D1F89008D00BEFE10 /* GraphyGraph.entitlements */,
 				0DDC4B8F1F8909B400BEFE10 /* MainViewController.swift */,
 				0DDC4B911F890B6800BEFE10 /* MainViewController.xib */,
+				0DF32F521F97634C007AEEFF /* GraphViewController.swift */,
+				0DF32F531F97634C007AEEFF /* GraphViewController.xib */,
 			);
 			path = GraphyGraph;
 			sourceTree = "<group>";
@@ -416,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DDC4B681F89008D00BEFE10 /* Assets.xcassets in Resources */,
+				0DF32F551F97634C007AEEFF /* GraphViewController.xib in Resources */,
 				0D4830D81F8C1D5200212BAE /* simple.graphml in Resources */,
 				0DDC4B921F890B6800BEFE10 /* MainViewController.xib in Resources */,
 				0DDC4B6B1F89008D00BEFE10 /* MainMenu.xib in Resources */,
@@ -460,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DDC4B661F89008D00BEFE10 /* AppDelegate.swift in Sources */,
+				0DF32F541F97634C007AEEFF /* GraphViewController.swift in Sources */,
 				0DDC4B951F89118300BEFE10 /* NSView.swift in Sources */,
 				0DDC4B901F8909B400BEFE10 /* MainViewController.swift in Sources */,
 			);
@@ -589,7 +597,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -640,7 +648,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -653,12 +661,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GraphyGraph/GraphyGraph.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DS56E5XJDT;
 				INFOPLIST_FILE = GraphyGraph/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = prokop.GraphyGraph;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -669,12 +680,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GraphyGraph/GraphyGraph.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DS56E5XJDT;
 				INFOPLIST_FILE = GraphyGraph/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = prokop.GraphyGraph;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
