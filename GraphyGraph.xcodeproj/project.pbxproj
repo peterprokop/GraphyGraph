@@ -28,6 +28,7 @@
 		0DDC4BBD1F8A786A00BEFE10 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC4BBC1F8A786A00BEFE10 /* Edge.swift */; };
 		0DF32F541F97634C007AEEFF /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF32F521F97634C007AEEFF /* GraphViewController.swift */; };
 		0DF32F551F97634C007AEEFF /* GraphViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DF32F531F97634C007AEEFF /* GraphViewController.xib */; };
+		0DF32F581F976A9E007AEEFF /* VertexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF32F571F976A9E007AEEFF /* VertexView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		0DDC4BBC1F8A786A00BEFE10 /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
 		0DF32F521F97634C007AEEFF /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		0DF32F531F97634C007AEEFF /* GraphViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphViewController.xib; sourceTree = "<group>"; };
+		0DF32F571F976A9E007AEEFF /* VertexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 				0DDC4B8F1F8909B400BEFE10 /* MainViewController.swift */,
 				0DDC4B911F890B6800BEFE10 /* MainViewController.xib */,
 				0DF32F521F97634C007AEEFF /* GraphViewController.swift */,
+				0DF32F571F976A9E007AEEFF /* VertexView.swift */,
 				0DF32F531F97634C007AEEFF /* GraphViewController.xib */,
 			);
 			path = GraphyGraph;
@@ -469,6 +472,7 @@
 				0DDC4B661F89008D00BEFE10 /* AppDelegate.swift in Sources */,
 				0DF32F541F97634C007AEEFF /* GraphViewController.swift in Sources */,
 				0DDC4B951F89118300BEFE10 /* NSView.swift in Sources */,
+				0DF32F581F976A9E007AEEFF /* VertexView.swift in Sources */,
 				0DDC4B901F8909B400BEFE10 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

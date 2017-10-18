@@ -14,6 +14,11 @@ class GraphViewController: NSViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .cyan
+
+        let vv = VertexView()
+        vv.backgroundColor = .red
+        vv.frame = NSRect(x: 10, y: 10, width: 20, height: 20)
+        view.addSubview(vv)
     }
     
 }
