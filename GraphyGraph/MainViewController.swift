@@ -10,6 +10,8 @@ import Cocoa
 
 class MainViewController: NSViewController {
 
+    fileprivate var splitView: NSSplitView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +22,7 @@ class MainViewController: NSViewController {
 
         addChildViewController(graphViewController)
 
-        let splitView = NSSplitView(frame: view.bounds)
+        splitView = NSSplitView(frame: view.bounds)
         splitView.translatesAutoresizingMaskIntoConstraints = false
 
         splitView.isVertical = true
@@ -75,8 +77,11 @@ class MainViewController: NSViewController {
             constraint3,
             constraint4,
         ])
+    }
+
+    override func viewDidLayout() {
+        super.viewDidLayout()
 
         splitView.setPosition(100, ofDividerAt: 0)
     }
-    
 }
