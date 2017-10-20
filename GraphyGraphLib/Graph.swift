@@ -110,7 +110,8 @@ open class Graph<V: Hashable> {
         adjacency[edge.source]?.insert(edge)
 
         if !isDirected {
-            adjacency[edge.target]?.insert(edge)
+            edges.insert(edge.reversed)
+            adjacency[edge.target]?.insert(edge.reversed)
         }
     }
 
@@ -139,6 +140,24 @@ open class Graph<V: Hashable> {
         }
     }
 
+    public func removeEdge(_ edge: Edge<V>) {
+        edges.remove(edge)
+
+        adjacency[edge.source]?.remove(edge)
+
+        if !isDirected {
+            adjacency[edge.target]?.remove(edge.reversed)
+        }
+    }
+
+    public func copy() -> Graph<V> {
+        let copy = Graph<V>(isDirected: isDirected)
+        copy.vertices = vertices
+        copy.edges = edges
+        copy.adjacency = adjacency
+
+        return copy
+    }
 }
 
 extension Graph where V: CustomDebugStringConvertible {
@@ -147,5 +166,56 @@ extension Graph where V: CustomDebugStringConvertible {
             let targets = $0.value.map { $0.target.debugDescription }.joined(separator: ", ")
             return "\($0.key.debugDescription) -> \(targets)"
         }.joined(separator: "\n")
+    }
+}
+
+extension Graph {
+
+    /// Returns all paths starting and ending at `startingAt`
+    public func computeWalkthrough(startingAt: V) -> [[Edge<V>]] {
+        var walks = [[Edge<V>]]()
+
+        for e in adjacency[startingAt]! {
+            let c = copy()
+            c.removeEdge(e)
+
+            if let rest = c.computeWalkthrough(startingAt: e.target, endingAt: startingAt) {
+                for r in rest {
+                    walks.append([e] + r)
+                }
+            }
+
+        }
+
+        return walks
+    }
+
+    /// Returns all paths starting and ending at `startingAt`
+    /// and ending at `endingAt`
+    public func computeWalkthrough(startingAt: V, endingAt: V) -> [[Edge<V>]]? {
+        if startingAt == endingAt {
+            return []
+        }
+
+        var walks = [[Edge<V>]]()
+
+        let adj = adjacency[startingAt]!
+        for e in adj {
+            let c = copy()
+            c.removeVertex(startingAt)
+
+            if let rest = c.computeWalkthrough(startingAt: e.target, endingAt: endingAt) {
+                for r in rest {
+                    walks.append([e] + r)
+                }
+
+                if rest.count == 0 {
+                    walks.append([e])
+                }
+            }
+
+        }
+
+        return walks.count > 0 ? walks : nil
     }
 }

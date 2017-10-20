@@ -8,8 +8,13 @@
 
 public struct Edge<V: Hashable>: Hashable {
 
-    let source: V
-    let target: V
+    public let source: V
+    public let target: V
+
+    public init(source: V, target: V) {
+        self.source = source
+        self.target = target
+    }
 
     public static func ==(lhs: Edge<V>, rhs: Edge<V>) -> Bool {
         return lhs.source == rhs.source &&
@@ -20,4 +25,7 @@ public struct Edge<V: Hashable>: Hashable {
         return source.hashValue ^ target.hashValue
     }
 
+    public var reversed: Edge<V> {
+        return Edge<V>(source: target, target: source)
+    }
 }
