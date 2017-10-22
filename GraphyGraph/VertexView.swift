@@ -11,6 +11,33 @@ import Cocoa
 class VertexView: NSView {
 
     var mouseDownLocation: NSPoint?
+    var vx: CGFloat = 0
+    var vy: CGFloat = 0
+
+    // MARK: Init
+
+    override init(frame frameRect: NSRect) {
+        super.init(frame: frameRect)
+        setup()
+    }
+
+    required init?(coder decoder: NSCoder) {
+        super.init(coder: decoder)
+        setup()
+    }
+
+    init() {
+        super.init(frame: .zero)
+        setup()
+    }
+
+    fileprivate func setup() {
+        wantsLayer = true
+        layer?.cornerRadius = 10
+        layer?.masksToBounds = true
+    }
+
+    // MARK: Other
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
