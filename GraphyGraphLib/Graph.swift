@@ -8,7 +8,7 @@
 
 open class Graph<V: Hashable> {
 
-    let isDirected: Bool
+    public let isDirected: Bool
 
     var vertices: Set<V> = []
     var edges: Set<Edge<V>> = []

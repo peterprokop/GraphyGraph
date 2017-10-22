@@ -20,17 +20,26 @@ class GraphViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let vv = Set(["1", "2", "3"])
+        let button = NSButton(title: "Start simulation", target: self, action: #selector(startSim))
+        button.frame = NSRect(x: 0, y: 0, width: 150, height: 30)
+        view.addSubview(button)
+
+        let vv = Set(["1", "2", "3", "4", "5"])
         let ee = Set([
             Edge<String>(source: "1", target: "2"),
             Edge<String>(source: "2", target: "3"),
             Edge<String>(source: "3", target: "1"),
+            Edge<String>(source: "3", target: "4"),
+            Edge<String>(source: "4", target: "5"),
         ])
 
         let g = Graph<String>(isDirected: false, vertices: vv, edges: ee)
         graphView.graph = g
     }
-    
+
+    @objc func startSim() {
+        graphView.startSimulation()
+    }
 }
 
 class GraphView: NSView {
@@ -45,7 +54,6 @@ class GraphView: NSView {
             setup()
         }
     }
-
 
     // Simulation-specific stuff
     var count = [VertexType: Int]()
@@ -95,30 +103,36 @@ class GraphView: NSView {
         for edge in graph.getEdges {
             bias[edge] = count[edge.source]! / (count[edge.source]! + count[edge.target]!)
         }
-
-        alpha = 1
     }
 
     override func draw(_ dirtyRect: NSRect) {
-        for i in 0 ..< vertexViews.count {
-            for j in i + 1 ..< vertexViews.count {
-                NSGraphicsContext.current?.saveGraphicsState()
+        NSGraphicsContext.current?.saveGraphicsState()
+
+        var edges = graph.getEdges
+        while let e = edges.popFirst() {
+            // TODO: add arrows for directed graph
+            if !graph.isDirected {
+                edges.remove(e.reversed)
+            }
+
+            let source = vertexToView[e.source]!
+            let target = vertexToView[e.target]!
 
                 let line = NSBezierPath()
-                line.move(to: vertexViews[i].frame.center)
-                line.line(to: vertexViews[j].frame.center)
+                line.move(to: source.frame.center)
+                line.line(to: target.frame.center)
                 line.lineWidth = 1
                 NSColor.lightGray.set()
 
                 line.stroke()
-
-                NSGraphicsContext.current?.restoreGraphicsState()
-            }
         }
+
+        NSGraphicsContext.current?.restoreGraphicsState()
     }
 
     func startSimulation() {
-        timer = Timer.scheduledTimer(timeInterval: 0.016, target: self, selector: #selector(tick), userInfo: nil, repeats: true)
+        alpha = 1
+        timer = Timer.scheduledTimer(timeInterval: 0.015, target: self, selector: #selector(tick), userInfo: nil, repeats: true)
     }
 
     @objc func tick() {
@@ -127,6 +141,7 @@ class GraphView: NSView {
             timer = nil
         }
 
+        force(alpha: alpha/20)
         alpha += (alphaTarget - alpha) * alphaDecay
 
         for v in vertexViews  {
@@ -136,47 +151,35 @@ class GraphView: NSView {
             v.frame.origin.x += v.vx
             v.frame.origin.y += v.vy
         }
+
+        needsDisplay = true
     }
 
-    func force(alpha: CGFloat) -> CGFloat {
+    func force(alpha: CGFloat) {
         // Just 1 iteration
 
-//          for (var i = 0, link, source, target, x, y, l, b; i < n; ++i) {
         for edge in graph.getEdges {
-//            link = links[i], source = link.source, target = link.target;
             let source = vertexToView[edge.source]!
             let target = vertexToView[edge.target]!
-//            x = target.x + target.vx - source.x - source.vx || jiggle();
-//            y = target.y + target.vy - source.y - source.vy || jiggle();
             var x = target.frame.center.x + target.vx - source.frame.center.x - source.vx
             var y = target.frame.center.y + target.vy - source.frame.center.y - source.vy
 
-//            l = Math.sqrt(x * x + y * y);
-//            l = (l - distances[i]) / l * alpha * strengths[i];
-//            x *= l, y *= l;
-            let defaultDistance: CGFloat = 30
+            let defaultDistance: CGFloat = 60
 
             var l = sqrt(x*x + y*y)
             l = (l - defaultDistance) / l * alpha * defaultStrength(edge: edge)
             x *= l; y *= l
 
             let b = CGFloat(bias[edge]!)
-//            target.vx -= x * (b = bias[i]);
-//            target.vy -= y * b;
+
             target.vx -= x * b
             target.vy -= y * b
 
-//            source.vx += x * (b = 1 - b);
-//            source.vy += y * b;
             source.vx += x * (1 - b)
             source.vy += y * (1 - b)
           }
-        return 0
     }
 
-//    function defaultStrength(link) {
-//        return 1 / Math.min(count[link.source.index], count[link.target.index]);
-//    }
     func defaultStrength(edge: Edge<VertexType>) -> CGFloat {
         return 1 / CGFloat(min(count[edge.source]!, count[edge.target]!))
     }
