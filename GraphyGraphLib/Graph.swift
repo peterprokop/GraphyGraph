@@ -8,11 +8,19 @@
 
 open class Graph<V: Hashable> {
 
-    let isDirected: Bool
+    public let isDirected: Bool
 
     var vertices: Set<V> = []
     var edges: Set<Edge<V>> = []
     var adjacency: [V: Set<Edge<V>>] = [:]
+
+    public var getEdges: Set<Edge<V>> {
+        return edges
+    }
+
+    public var getVertices: Set<V> {
+        return vertices
+    }
 
     public var vertexCount: Int {
         return vertices.count
