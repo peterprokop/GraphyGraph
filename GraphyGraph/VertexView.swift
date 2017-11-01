@@ -10,6 +10,7 @@ import Cocoa
 
 class VertexView: NSView {
 
+    var textField: NSTextField?
     var mouseDownLocation: NSPoint?
     var vx: CGFloat = 0
     var vy: CGFloat = 0
@@ -35,6 +36,15 @@ class VertexView: NSView {
         wantsLayer = true
         layer?.cornerRadius = 10
         layer?.masksToBounds = true
+
+        textField = NSTextField(frame: bounds)
+        textField?.textColor = .white
+        textField?.alignment = .justified//.center
+        textField?.isEditable = false
+        textField?.isBezeled = false
+        textField?.drawsBackground = false
+//        textField?.backgroundColor = .blue
+        addSubview(textField!)
     }
 
     // MARK: Other

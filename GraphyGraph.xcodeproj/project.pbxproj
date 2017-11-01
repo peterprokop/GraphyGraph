@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0D094D7C1F8C0B72007AE07F /* simple.graphml in Resources */ = {isa = PBXBuildFile; fileRef = 0D094D7B1F8C0B72007AE07F /* simple.graphml */; };
+		0D3315BB1FA9A664000BBCAF /* NewVertexPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3315B91FA9A664000BBCAF /* NewVertexPopover.swift */; };
+		0D3315BC1FA9A664000BBCAF /* NewVertexPopover.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D3315BA1FA9A664000BBCAF /* NewVertexPopover.xib */; };
 		0D4830D21F8C118100212BAE /* simple.graphml in Resources */ = {isa = PBXBuildFile; fileRef = 0D094D7B1F8C0B72007AE07F /* simple.graphml */; };
 		0D4830D71F8C14F800212BAE /* GraphMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4830D61F8C14F800212BAE /* GraphMLParser.swift */; };
 		0D4830D81F8C1D5200212BAE /* simple.graphml in Resources */ = {isa = PBXBuildFile; fileRef = 0D094D7B1F8C0B72007AE07F /* simple.graphml */; };
@@ -86,6 +88,8 @@
 /* Begin PBXFileReference section */
 		0D094D7B1F8C0B72007AE07F /* simple.graphml */ = {isa = PBXFileReference; lastKnownFileType = text; path = simple.graphml; sourceTree = "<group>"; };
 		0D094D7D1F8C0BD8007AE07F /* attributes.graphml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = attributes.graphml; sourceTree = "<group>"; };
+		0D3315B91FA9A664000BBCAF /* NewVertexPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewVertexPopover.swift; sourceTree = "<group>"; };
+		0D3315BA1FA9A664000BBCAF /* NewVertexPopover.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewVertexPopover.xib; sourceTree = "<group>"; };
 		0D4830D61F8C14F800212BAE /* GraphMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphMLParser.swift; sourceTree = "<group>"; };
 		0DDC4B621F89008D00BEFE10 /* GraphyGraph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphyGraph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DDC4B651F89008D00BEFE10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +169,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		0D3315B81FA9A60A000BBCAF /* MainArea */ = {
+			isa = PBXGroup;
+			children = (
+				0D3315B91FA9A664000BBCAF /* NewVertexPopover.swift */,
+				0D3315BA1FA9A664000BBCAF /* NewVertexPopover.xib */,
+			);
+			path = MainArea;
+			sourceTree = "<group>";
+		};
 		0DDC4B591F89008D00BEFE10 = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +205,7 @@
 		0DDC4B641F89008D00BEFE10 /* GraphyGraph */ = {
 			isa = PBXGroup;
 			children = (
+				0D3315B81FA9A60A000BBCAF /* MainArea */,
 				0DDC4B931F89117400BEFE10 /* Extensions */,
 				0DDC4B651F89008D00BEFE10 /* AppDelegate.swift */,
 				0DDC4B671F89008D00BEFE10 /* Assets.xcassets */,
@@ -428,6 +442,7 @@
 				0DF32F551F97634C007AEEFF /* GraphViewController.xib in Resources */,
 				0D4830D81F8C1D5200212BAE /* simple.graphml in Resources */,
 				0DDC4B921F890B6800BEFE10 /* MainViewController.xib in Resources */,
+				0D3315BC1FA9A664000BBCAF /* NewVertexPopover.xib in Resources */,
 				0DDC4B6B1F89008D00BEFE10 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,6 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D3315BB1FA9A664000BBCAF /* NewVertexPopover.swift in Sources */,
 				0DDC4B661F89008D00BEFE10 /* AppDelegate.swift in Sources */,
 				0DF32F541F97634C007AEEFF /* GraphViewController.swift in Sources */,
 				0DDC4B951F89118300BEFE10 /* NSView.swift in Sources */,

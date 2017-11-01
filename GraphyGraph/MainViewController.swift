@@ -78,11 +78,42 @@ class MainViewController: NSViewController {
             constraint3,
             constraint4,
         ])
+
+        NSEvent.addLocalMonitorForEvents(matching: NSEvent.EventTypeMask.keyDown, handler: { (event) -> NSEvent? in
+
+            if event.modifierFlags.contains(.command) && event.characters == "n" {
+                print("event.keyCode \(event.keyCode) \(event.characters)")
+                self.showNewVertexPopup()
+            }
+
+            return event
+
+        })
     }
 
     override func viewDidLayout() {
         super.viewDidLayout()
 
         splitView.setPosition(100, ofDividerAt: 0)
+    }
+
+    override var acceptsFirstResponder: Bool{
+        return true
+    }
+
+    override func keyDown(with event: NSEvent) {
+        print("event \(event)")
+    }
+
+    func showNewVertexPopup() {
+        let popover = NSPopover()
+
+        let rect = NSRect(x: 0, y: 0, width: view.bounds.width, height: 10)
+        popover.contentSize = NSSize(width: 200, height: 200)
+        popover.appearance = NSAppearance(named: .vibrantDark)
+        popover.behavior = .transient
+        popover.animates = true
+        popover.contentViewController = NewVertexPopover()
+        popover.show(relativeTo: rect, of: view, preferredEdge: .minY)
     }
 }

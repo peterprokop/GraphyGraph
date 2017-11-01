@@ -24,14 +24,28 @@ class GraphViewController: NSViewController {
         button.frame = NSRect(x: 0, y: 0, width: 150, height: 30)
         view.addSubview(button)
 
-        let vv = Set(["1", "2", "3", "4", "5"])
-        let ee = Set([
-            Edge<String>(source: "1", target: "2"),
-            Edge<String>(source: "2", target: "3"),
-            Edge<String>(source: "3", target: "1"),
-            Edge<String>(source: "3", target: "4"),
-            Edge<String>(source: "4", target: "5"),
-        ])
+        let sentence = "Youwillneversolvethisbitches"
+        let vvArray = Array(sentence.characters.map { String($0) } )
+        var vv = Set<String>()
+        for v in vvArray {
+            var candidate = v
+
+            var index = 1
+            while vv.contains(candidate) {
+                candidate = "\(v) \(index)"
+                index += 1
+            }
+
+            vv.insert(candidate)
+        }
+
+        var ee = Set<Edge<String>>()
+
+        for i in 0 ..< vv.count {
+            for j in i ..< vv.count {
+                ee.insert(Edge<String>(source: vvArray[i], target: vvArray[j]))
+            }
+        }
 
         let g = Graph<String>(isDirected: false, vertices: vv, edges: ee)
         graphView.graph = g
@@ -82,14 +96,16 @@ class GraphView: NSView {
 
         // Add vertices
         for v in graph.getVertices {
-            let vv = VertexView()
-            vertexToView[v] = vv
-
-            vv.backgroundColor = .blue
-
             let x = CGFloat(arc4random_uniform(200)) + 50
             let y = CGFloat(arc4random_uniform(200)) + 50
-            vv.frame = NSRect(x: x, y: y, width: 20, height: 20)
+            let frame = NSRect(x: x, y: y, width: 20, height: 20)
+
+            let vv = VertexView(frame: frame)
+            vertexToView[v] = vv
+
+            let str = " \(v.substring(to: String.Index.init(encodedOffset: 1)))"
+            vv.textField?.attributedStringValue = NSAttributedString(string: str)
+            vv.backgroundColor = .blue
 
             vertexViews.append(vv)
             addSubview(vv)
@@ -106,8 +122,6 @@ class GraphView: NSView {
     }
 
     override func draw(_ dirtyRect: NSRect) {
-        NSGraphicsContext.current?.saveGraphicsState()
-
         var edges = graph.getEdges
         while let e = edges.popFirst() {
             // TODO: add arrows for directed graph
@@ -118,16 +132,18 @@ class GraphView: NSView {
             let source = vertexToView[e.source]!
             let target = vertexToView[e.target]!
 
-                let line = NSBezierPath()
-                line.move(to: source.frame.center)
-                line.line(to: target.frame.center)
-                line.lineWidth = 1
-                NSColor.lightGray.set()
+            NSGraphicsContext.current?.saveGraphicsState()
+            let line = NSBezierPath()
 
-                line.stroke()
+            line.move(to: source.frame.center)
+            line.line(to: target.frame.center)
+            line.lineWidth = 1
+            NSColor.lightGray.set()
+
+            line.stroke()
+            NSGraphicsContext.current?.restoreGraphicsState()
         }
 
-        NSGraphicsContext.current?.restoreGraphicsState()
     }
 
     func startSimulation() {

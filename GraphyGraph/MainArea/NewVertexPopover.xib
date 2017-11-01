@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NewVertexPopover" customModule="GraphyGraph" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="213" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LlB-ZM-izc">
+                    <rect key="frame" x="20" y="14" width="108" height="22"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Name" drawsBackground="YES" id="fns-2T-ZeI">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mda-M2-44J">
+                    <rect key="frame" x="130" y="8" width="81" height="32"/>
+                    <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="beG-oa-Qrr">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="mda-M2-44J" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="14" id="MBx-y3-azi"/>
+                <constraint firstItem="LlB-ZM-izc" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="UAI-u0-mFK"/>
+                <constraint firstAttribute="bottom" secondItem="LlB-ZM-izc" secondAttribute="bottom" constant="14" id="Z6a-nk-B6g"/>
+                <constraint firstItem="LlB-ZM-izc" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="14" id="l2v-zT-zW4"/>
+                <constraint firstItem="mda-M2-44J" firstAttribute="leading" secondItem="LlB-ZM-izc" secondAttribute="trailing" constant="8" id="loT-GM-MPG"/>
+                <constraint firstAttribute="bottom" secondItem="mda-M2-44J" secondAttribute="bottom" constant="15" id="mxl-vG-Yvi"/>
+                <constraint firstAttribute="trailing" secondItem="mda-M2-44J" secondAttribute="trailing" constant="8" id="wc6-Tb-XMW"/>
+            </constraints>
+            <point key="canvasLocation" x="-88.5" y="-43"/>
+        </customView>
+    </objects>
+</document>
